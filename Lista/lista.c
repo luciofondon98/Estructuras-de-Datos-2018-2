@@ -154,11 +154,6 @@ void mostrarLista(tLista *Lista){
 }
 
 void liberarLista(tLista *Lista){
-    tNodo * current = Lista->head;
-    while(current != NULL){
-        current = current->sig; 
-        free(current);
-    }
     free(Lista->head);
     free(Lista);
 }
